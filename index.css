@@ -1,0 +1,77 @@
+@import url('/reset.css');
+:root{
+    --color-White: hsl(0, 0%, 100%);
+    --colorLightpink: hsl(275, 100%, 97%);
+    --color-Grayish-purple: hsl(292, 16%, 49%);
+    --color-Dark-purple: #ad28eb;
+}
+
+@font-face {
+    font-family: 'worksansi';
+    src: url(./assets/fonts/WorkSans-Italic-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: 'worksansv';
+    src: url(./assets/fonts/WorkSans-VariableFont_wght.ttf);
+}
+body{
+    background-color: var(--colorLightpink);
+}
+.bg{
+    width: 100%;
+    height: 15rem;
+    object-fit:cover;
+}
+.box{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    background-color: var(--color-White) ;
+    border-radius: 4%;
+    padding: 40px;
+    max-width: 40rem;
+    font-family: 'worksansv';
+}
+.question{
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+}
+
+.faq{
+    border-bottom: 1px solid rgb(234, 234, 234);
+    padding: 5% 0%;
+}
+
+.question:hover{
+    cursor: pointer;
+    color: var(--color-Dark-purple);
+    
+}
+.answer{
+    font-size: 90%;
+    font-weight: 400;
+    padding-top: 3%;
+    color: var(--color-Grayish-purple);
+    display: none;
+}
+.heading{
+    display: flex;
+    gap: 20px;
+    .icons{
+        width: 6.5%;
+    }
+    h1{
+        font-size:300%;
+    }
+}
+.minus{
+    display: none;
+}
+.fours{
+    border-bottom: 0px;
+    padding: 5% 0% 0%;
+}
