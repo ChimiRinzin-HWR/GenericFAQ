@@ -19,13 +19,13 @@ var flag3 = true
 var flag4 = true
 function function1(){
     if(!flag1){
-        document.getElementById("ans1").style.display = "none";
+        document.getElementById("ans1").classList.remove('clicked');
         document.getElementById("plus1").style.display = "block";
         document.getElementById("minus1").style.display = "none";
         flag1 = true;
     }
     else {
-        document.getElementById("ans1").style.display = "block";
+        document.getElementById("ans1").classList.add('clicked');
         document.getElementById("minus1").style.display = "block";
         document.getElementById("plus1").style.display = "none";
         flag1 = false;
@@ -33,13 +33,13 @@ function function1(){
 }
 function function2(){
     if(!flag2){
-        document.getElementById("ans2").style.display = "none";
+        document.getElementById("ans2").classList.remove('clicked');
         document.getElementById("plus2").style.display = "block";
         document.getElementById("minus2").style.display = "none";
         flag2 = true;
     }
     else {
-        document.getElementById("ans2").style.display = "block";
+        document.getElementById("ans2").classList.add('clicked');
         document.getElementById("minus2").style.display = "block";
         document.getElementById("plus2").style.display = "none";
 
@@ -48,13 +48,13 @@ function function2(){
 }
 function function3(){
     if(!flag3){
-        document.getElementById("ans3").style.display = "none";
+        document.getElementById("ans3").classList.remove('clicked');
         document.getElementById("plus3").style.display = "block";
         document.getElementById("minus3").style.display = "none";
         flag3 = true;
     }
     else {
-        document.getElementById("ans3").style.display = "block";
+        document.getElementById("ans3").classList.add('clicked');
         document.getElementById("minus3").style.display = "block";
         document.getElementById("plus3").style.display = "none";
 
@@ -63,13 +63,13 @@ function function3(){
 }
 function function4(){
     if(!flag4){
-        document.getElementById("ans4").style.display = "none";
+        document.getElementById("ans4").classList.remove('clicked');
         document.getElementById("plus4").style.display = "block";
         document.getElementById("minus4").style.display = "none";
         flag4 = true;
     }
     else {
-        document.getElementById("ans4").style.display = "block";
+        document.getElementById("ans4").classList.add('clicked');
         document.getElementById("plus4").style.display = "none";
         document.getElementById("minus4").style.display = "block";
         flag4 = false;

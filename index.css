@@ -1,4 +1,4 @@
-@import url('/reset.css');
+@import url('./reset.css');
 :root{
     --color-White: hsl(0, 0%, 100%);
     --colorLightpink: hsl(275, 100%, 97%);
@@ -14,36 +14,41 @@
     font-family: 'worksansv';
     src: url(./assets/fonts/WorkSans-VariableFont_wght.ttf);
 }
-body{
+html, body{
+    background-image: url(./assets/images/background-pattern-desktop.svg);
+    background-attachment: fixed;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-color: var(--colorLightpink);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
-.bg{
-    width: 100%;
-    height: 15rem;
-    object-fit:cover;
+main{
+    height: 100%;
+    border-radius: 10px;
+    width: 40rem;
 }
 .box{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -ms-transform: translate(-50%,-50%);
-    transform: translate(-50%, -50%);
     width: 100%;
     background-color: var(--color-White) ;
-    border-radius: 4%;
+    border-radius: 10px;
     padding: 40px;
-    max-width: 40rem;
     font-family: 'worksansv';
 }
 .question{
     font-weight: 600;
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 
 .faq{
     border-bottom: 1px solid rgb(234, 234, 234);
     padding: 5% 0%;
+    overflow: hidden;
 }
 
 .question:hover{
@@ -51,12 +56,24 @@ body{
     color: var(--color-Dark-purple);
     
 }
+.plus{
+    position: absolute;
+    left: 33rem;
+}
 .answer{
     font-size: 90%;
     font-weight: 400;
     padding-top: 3%;
     color: var(--color-Grayish-purple);
-    display: none;
+    transform: translateY(100%);
+    height: 0;
+    overflow: hidden;
+    transition: transform 0.4s ease-in-out;
+}
+.clicked{
+    transform: translateY(0%);
+    overflow: auto;
+    height: auto;
 }
 .heading{
     display: flex;
@@ -69,9 +86,60 @@ body{
     }
 }
 .minus{
+    position: absolute;
+    left: 33rem;
     display: none;
 }
 .fours{
     border-bottom: 0px;
     padding: 5% 0% 0%;
+}
+footer{
+    position: absolute;
+    top: 97%;
+}
+@media screen and (max-width: 575px){
+    html, body{
+        background-image: url(./assets/images/background-pattern-mobile.svg);
+    }
+    main{
+        height: 100%;
+        border-radius: 10px;
+        width: 28rem;
+        padding: 0.8rem;
+    }
+    .box{
+        padding: 2rem;
+    }
+    .question{
+        font-weight: 700;
+        display: flex;
+        font-size: 1.3rem;
+        padding: 0 4rem 0 0;
+    }
+    
+    .faq{
+        border-bottom: 1px solid rgb(234, 234, 234);
+        padding: 5% 0%;
+    }
+    
+    .question:hover{
+        cursor: pointer;
+        color: var(--color-Dark-purple);
+    }
+    .answer{
+        font-size: 1.1rem;
+    }
+    .plus{
+        left: 19.5rem;
+        width: 3rem;
+    }
+    .minus{
+        left: 19.5rem;
+        width: 3rem;
+    }
+    .fours{
+        border-bottom: 0px;
+        padding: 5% 0% 0%;
+    }
 }
